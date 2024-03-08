@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+body{
+    overflow: hidden;
+    background-color: #fff;
+}
+ .container-fluid{
+    margin: 0 5px;
+ }
+
+.navbar-menu .bx{
+    font-size: 25px;
+    margin-right: 25px;
+
+}
+
+.navbar-brand img{
+    width: 95x;
+    height: 54px;
+}
+
+.logo-vn{
+    font-size: 10px;
+    position: absolute;
+    top: 25px;
+}
+
+.yt-menu{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.yt-menu:hover{
+    background: rgba(128, 128, 128, 0.4);
+}
+
+.yt-searchbox{
+    width: 60%;
+    display: flex;
+    border : none;
+    padding: 5px 10px;
+   
+}
+.yt-searchbox input{
+    width: 85%;
+    border-top-left-radius: 900px;
+    border-bottom-left-radius: 900px;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 16px;
+    outline: 1px solid rgba(177, 177, 177, 0.3);
+}
+
+.yt-searchbox input:focus{
+    outline: 1px solid #3f51b5;
+}
+
+.yt-searchbox span{
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    width: 60px;
+    background-color: rgb(219, 219, 219, 0.2);
+    border: 1px solid rgba(177, 177, 177, 0.3);
+    padding: 6px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.yt-searchbox span:hover{
+    background-color: rgba(188, 188, 188, 0.3);
+}
+
+
+.yt-searchbox:hover >.yt-search-dropdown{
+    display: block !important;
+}
+
+.bx-search{
+    font-size: 20px;
+    font-weight: 0.1px;
+}
+
+.yt-searchmic{
+    margin-left: 15px;
+}
+
+.yt-searchmic .bxs-microphone{
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgba(188, 188, 188, 0.3);
+    border-radius: 50%;
+}
+
+.yt-searchmic:hover{
+    border-radius: 50%;
+    background-color: rgba(188, 188, 188, 0.5);
+}
+
+.yt-action{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.yt-action .bx{
+    font-size: 24px;
+    padding: 7px;
+    font-weight: lighter;
+}
+
+.yt-action img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.yt-action .bx{
+    margin: 0;
+    cursor: pointer;
+    color: black;
+}
+
+.yt-action .bx:hover{
+    background-color:  rgba(188, 188, 188, 0.5);
+    border-radius: 50%;
+}
+
+.yt-search-dropdown{
+    z-index: 100;
+    background: #fff;
+    height: max-content;
+    width: 80%;
+    border-radius: 10px;
+    padding: 5px 0px;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    display: none;
+}
+
+
+.yt-search-item{
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+.yt-search-item:hover{
+    background: rgba(128, 128, 128, 0.302);
+}
+
+
+.yt-search-item a{
+    text-decoration: none;
+}
+
+/* sidebar */
+.sidebar{
+    position: absolute;
+    top: 80px;
+    left: -10px;
+    height: 100vh;
+    width: 90px;
+    overflow-y: scroll;
+    transition: all 0.5s ease;
+}
+
+/* scroll */
+.sidebar::-webkit-scrollbar{
+    width: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+.sidebar.active .sidebar:hover::-webkit-scrollbar-thumb{
+    background: #909090;
+    border-radius: 10px;
+}
+
+.sidebar-list li a span{
+    font-size: 10px;
+    
+}
+
+.sidebar.active ~ .video-container{
+    left: 240px ;
+    width: calc(100%-240px) !important ;
+}
+
+
+.sidebar.active{
+    width: 240px;
+}
+
+.sidebar.active .sidebar-list li{
+    padding: 10px 0px 10px 15px;
+}
+.sidebar.active .sidebar-list li a span{
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.sidebar.active .sidebar-list li a i{
+    font-size: 20px;
+}
+
+.sidebar.active .sidebar-list li a img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+
+.sidebar-list {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar-list li{
+    padding-left: 10px;
+}
+
+.sidebar-list li a{
+    color: black;
+    font-size: 15px;
+}
+
+
+.sidebar-list li:hover{
+    border-radius: 10px;
+    background-color: rgba(229, 229, 229, 0.5);
+}
+
+.hiden{
+    opacity: 0;
+}
+
+.sidebar.active .hiden{
+    opacity: 1;
+}
+
+.sidebar .hr{
+    width: 95%;
+    height: 1px;
+    border: 1px solid #e5e5e5;
+}
+
+.sidebar-title {
+    display: flex;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.sidebar-title i{
+    font-size: 30px;
+    translate: 0 5px;
+}
+
+.channel{
+    padding-left: 15px !important;
+}
+
+.copyright{
+    margin-bottom: 25px;
+}
+
+.list-item{
+    display: flex;
+    list-style: none;
+    word-break: break-word;
+}
+
+.Items{
+    padding: 0px 5px;
+    white-space: nowrap;
+}
+
+.Items a{
+    text-decoration: none;
+    color: #606060;
+    font-weight: bold;
+    font-size: 12px;
+    /* font-family: 'roboto'; */
+}
+
+.list-item-last{
+    display: block;
+}
+
+.sidebar-text{
+    margin: 10px 0 70px 30px;
+    display: block;
+    font-weight: lighter;
+    color: #909090;
+    font-size: 14px;
+
+}
+
+
+/* Video */
+.video-container {
+    position: relative;
+    height: 100vh;
+    left: 70px;
+    transition: all 0.5s ease;
+    width: calc(100%-70px);
+    overflow-y: scroll;
+    padding-right: 5%;
+}
+
+.slider{
+    color: black;
+    /* margin: 12px 12px 0px 14.5px; */
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+} 
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+
+.text-categories{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    background-color: rgba(144, 144, 144, 0.2) ;
+    padding: 8px 12px ;
+    margin: 12px 12px 12px 0;
+    border-radius: 10px;
+    font-weight: bold;
+    white-space: nowrap ;
+    align-items: center;  
+}
+
+.text-categories:hover{
+    background-color: rgba(144, 144, 144, 0.302);
+    cursor: pointer;
+}
+
+.text-first{
+    background-color: black !important;
+    color: white !important;
+}
+
+
+.yt-videos{
+    width: 100%;
+}
+
+.card{
+    cursor: pointer;
+    width: 100%;
+}
+
+.card-video{
+    text-decoration: none;
+    color: black;
+}
+
+.yt-videos-img{
+    border-radius: 15px;
+    width: 100%;
+    height: 190px;
+}
+
+.yt-videos-img:hover{
+    border-radius: 0px;
+    transition: 0.5s;
+    background-color: #c6c6c6;
+}
+
+.card:hover{
+    border-radius: 0px !important;
+    color: black !important;
+}
+
+
+a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.card-video-details img{
+    border-radius: 50%;
+}
